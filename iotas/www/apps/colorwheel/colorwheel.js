@@ -20,7 +20,8 @@ function colorwheel() {
 	
 	function appStart() {
 		console.log("colorwheel.appStart");
-		$("head").append('<link rel="stylesheet" href="colorwheel.css" />');
+		var cssPathFromBase = $('head base').attr('href') + "colorwheel.css";
+		$("head").append('<link rel="stylesheet" type="text/css" href="' + cssPathFromBase + '" />');
 		setCanvasImage()
 	}
 	
