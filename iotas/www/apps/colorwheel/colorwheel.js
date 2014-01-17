@@ -38,6 +38,8 @@ function colorwheel() {
 			var wh = $('.selector').innerWidth();
 			$('#canvas').attr('width', wh);
 			$('#canvas').attr('height', wh);
+			$('#canvas').css('-touch-action','none');
+			$('#canvas').css('-ms-touch-action','none');
 			theApp.context.drawImage(canvasImage, x, y, wh, wh);
 		};
 		canvasImage.src="colorwheel.png";
